@@ -1,0 +1,84 @@
+*{
+    Margin: 0px;
+    Padding: 0px;
+}
+
+#Header{
+    min-height: 50px;
+    background-color: rgb(196, 196, 196);
+
+}
+
+#leftnav, #rightnav, .topbox, .bottombox{
+    display: inline-block;
+}
+
+#leftnav{
+    font-family:'Comic Sans MS', 'Comic Sans', 'Marker Felt';
+    padding: 15px;
+}
+
+#leftnav h1{
+    width: 230px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+
+#rightnav{
+    width: 70%;
+    text-align: right;
+    padding: 15px;
+}
+
+#mainbox{
+    min-height:500px;
+    background-color: black;
+    padding:50px;
+}
+.topbox{
+    height: 370px;
+    width:46%;
+    background-color: rgb(206, 205, 205);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+.bottombox{
+    min-height: 500px;
+    width:31%;
+    background-color: rgb(206, 205, 205);
+    margin-right:20px;
+    vertical-align:Top;
+}
+
+#footer {
+    min-height: 50px;
+    background-color: rgb(196, 196, 196);
+}
+.banner{
+    height: 50px;
+    background-color:rgb(124, 121, 121);
+    color:white;
+}
+
+#level1 img{
+    height: 350px;
+    width: 48%;
+    padding: 10px;
+    background-color: grey;
+    margin-right: 20px;
+}
+.banner p{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.topbox p,.topbox a{
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.bottombox img{
+    max-width:100%
+}
+
+

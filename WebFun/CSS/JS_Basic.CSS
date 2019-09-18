@@ -1,0 +1,58 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+   #wrapper{
+    width: 970px;
+    background-color: rgb(81, 81, 160);
+    margin: 0px auto;
+    Padding: 25px
+   }
+   #header{
+    border-radius: 25px;
+    min-height: 150px;
+    margin-bottom: 25px;
+    background-color: rgb(206, 94, 94);
+   }
+   #navigation{
+    border-radius: 25px;
+    min-height: 300px;
+    width: 200px;
+    background-color: rgb(129, 212, 204);
+    display: inline-block;
+    vertical-align: top;
+    Margin-right: 15px;
+    padding: 25px;
+   }
+   #main_content{
+    border-radius: 25px;
+    min-height: 400px;
+    width: 630px;
+    background-color: rgb(39, 37, 37);
+    display: inline-block; 
+    Padding: 35px; 
+   }
+   #JS_Basics{
+       color: white;
+       Font-size: 50px;
+       padding: 50px;
+   }
+   #advertisement{
+    border-radius: 25px;
+    min-height: 120px;
+    min-width: 660px;
+    background-color: rgb(134, 131, 131);
+    margin-Top: 15px;
+   }
+   
+   P, h3, ul{
+       color: white;
+       padding: 15px; 
+
+   }    
+   
+   .special{
+       text-decoration: underline;
+       color: white
+   }

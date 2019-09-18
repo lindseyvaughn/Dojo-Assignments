@@ -1,0 +1,53 @@
+*{
+    Margin: 0px;
+    Padding: 0px;
+}
+#Header{
+    min-height: 50px;
+    background-color: rgb(196, 196, 196);
+
+}
+#leftnav, #rightnav, .topbox, .bottombox{
+    display: inline-block;
+}
+#leftnav{
+    font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+    padding: 15px;
+}
+#leftnav h1{
+    width: 230px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+#rightnav{
+    width: 70%;
+    text-align: right;
+    padding: 15px;
+}
+#mainbox{
+    min-height:500px;
+    background-color: black;
+    padding:20px;
+}
+.topbox{
+    height: 300px;
+    width:600px;
+    background-color: grey;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.bottombox{
+    min-height: 500px;
+    width:31.5%;
+    background-color: grey;
+    margin-right:20px;
+}
+#footer {
+    min-height: 50px;
+    background-color: rgb(196, 196, 196);
+}
+.banner{
+    height: 50px;
+    background-color:red;
+    color: yellow;
+}
