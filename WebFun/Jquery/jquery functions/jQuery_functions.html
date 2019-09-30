@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="jQuery_functions.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="container1"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
+    <div id="container4"></div>
+    <div id="container5"></div>
+    <div id="container6"></div>
+    <div id="container7"></div>
+    </div>
+
+    <script>
+    $('#container').append('<h1>Fade Out</h1>');
+    $('#container1').append('<button>FadeOut</button><p id="p1">Click the buttom to fade out this text</p>');
+    $("button").click(function(){
+        $("#p1").fadeOut();
+    }) 
+
+
+    $('#container2').append('<h1>Add Class</h1>');
+    $('#container3').append('<button id = "button2">AddClass</button><p id="p2" >Click the buttom to add class red to this text</p>');
+    $('#button2').click(function(){
+        $("#p2").addClass('intro');
+    })
+
+
+    $('#container4').append('<h1>After Method</h1>');
+    $('#container5').append('<button id = "button3">AfterMethod</button><p id="p3" >Click the buttom to insert content after p element</p>');
+    $('#button3').click(function(){
+        var txt1 = "<b>This is here!</b>";
+        $("#p3").after(txt1);
+    })
+
+
+    $('#container6').append('<h1>Before</h1>');
+    $('#container7').append('<button id = "button4">before</button><p id="p4" >Click the buttom to insert content after p element</p>');
+    $('#button4').click(function(){
+        var txt1 = "<b>This is here!</b>";
+        $("#p4").before(txt1);
+    })
+
+
+    </script>
+</body>
+</html>

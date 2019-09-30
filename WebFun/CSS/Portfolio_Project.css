@@ -44,13 +44,15 @@
     vertical-align: top;
 }
 .bottombox{
-    min-height: 500px;
-    width:31%;
+    height: 1000px;
+    width:32%;
     background-color: rgb(206, 205, 205);
     margin-right:20px;
     vertical-align:Top;
 }
-
+.bottom p{
+    height: 200px;
+}
 #footer {
     min-height: 50px;
     background-color: rgb(196, 196, 196);
@@ -80,5 +82,38 @@
 .bottombox img{
     max-width:100%
 }
+.icon{
+    padding:5px;
+}
+.icon img{
+    padding:10px;
+    max-width: 12%;
+}
+.bottombox p{
+    height:200px;
+    padding:15px;
+}
+.bottombox input{
+    margin-left:35%;
+    margin-top: 20px;
+    font-size: 150%;
+    font-weight: bolder;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+    background-color: #45B78B;
+    border-radius: 10px;
+    font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
 
-
+    
+}
+#footer img{
+    width:20px;
+    padding-right:100px
+}
+#footer p{
+    margin-bottom: 15px;
+    padding-right: 70px;
+}

@@ -1,0 +1,28 @@
+
+.question1{
+    display: none;
+}
+
+p{
+color:
+font-family: "Times New Roman", Times, serif;
+font-size:30px;
+
+
+}
+.answer1{
+    display: none;
+}
+img{
+    display: block;
+    border-radius: 25px;
+}
+.soccer{
+    display: inline-block;
+    padding-left: 40px;
+    width:24%;
+}
+body{
+    background-color: rgb(245, 245, 142);
+
+}

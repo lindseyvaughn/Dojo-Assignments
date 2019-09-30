@@ -1,0 +1,255 @@
+*{
+    Margin:0px;
+    Padding:0
+}
+.container{
+    background-color: grey;
+    height:1000px;
+    Width:1000px;
+}
+.header{
+    background-color: white;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header img{
+    Width:100px;
+    height:100px;
+    display:inline-block;
+}
+.header p{
+    font-size: 70px;
+    color: black;
+    display:inline-block;
+    vertical-align: top;
+    margin-top:15px;
+}
+.header span{
+    color:blue;
+}
+.banner{
+    color: white;
+    background-color: blue;
+    font-size: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.leftnav{
+    width: 198px;
+    height:520px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top:20px;
+    display:inline-block;
+   
+
+}
+.red{
+    color: red;
+
+}
+.leftnav p{
+    margin-left: 10px;
+    margin-bottom:5px;
+}
+.blue{
+    color:blue;
+}
+.leftnavbottomp{
+    font-size:12px;
+    padding-top: 5px;
+}
+.buttons{
+    height:20px;
+    border-radius:5px;
+    padding:7px;
+    margin-left:2px;
+}
+#button1{
+    background-color: blue;
+    margin-bottom:3px;
+
+       
+}
+#button1 a{
+    color:white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+#button2{
+    background-color:orange;
+}
+#button2 a{
+    color:white;
+    text-decoration: none;
+    margin-left: 15px;
+
+}
+
+.leftnav img{
+    width:196px;
+    height:235px;
+    margin-left:2px;
+    margin-top:30px;
+
+}
+.leftnavline{
+    border-style: solid;
+    border-width:.5px;
+    border-color:black;
+    margin-top:30px;
+
+}
+.ad {
+    background-image: url("ad_background.png");
+    height:230px;
+    width:198px;
+    padding:10px;
+    position:relative;
+    margin-top:20px;
+}
+.ad p{
+    color:white;
+    font-size:24px;
+    text-align:center;
+}
+.ad img{
+    width:70px;
+    height:70px;
+    margin-left:60px;
+
+}
+#button3{
+   background-color:aqua;
+    width:115px;
+    height:15px;
+    margin-left:40px;
+
+}
+#button3 a{
+    text-decoration:none;
+    font-size:11px;
+    color:white;
+    text-align:center;
+    
+}
+.rightnav{
+    min-width:730px;
+    height:400px;
+    vertical-align: top;
+    background-color:grey;
+    display:inline-block;
+    margin-left:40px;
+    padding:10px;
+    
+    
+}
+.topbox{
+    width:500px;
+}
+#DNS{
+    display:inline-block;
+    min-width:100px;
+    vertical-align: top;
+}
+#DNS p{
+    color:blue;
+    font-size: 50%;
+    display:inline-block;
+}
+#DNS img{
+    width:20px;
+    height:20px;
+    vertical-align: top;
+}
+#phoneimage{
+    width:40px;
+    position: relative;
+    left:400px;
+}
+#contact{
+    color:black;
+    position:relative;
+    left: 450px;
+    font-size:10px;
+    display:inline-block;
+
+}
+#contact h2{
+    color:aqua;
+}
+.rightnavline{
+    border-style: solid;
+    border-width:.5px;
+    border-color:black;
+    margin-top:30px;
+    width:700px;
+}
+#content{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:730px;
+    color: black;
+
+}
+#content h2{
+    color:blue;
+    font-size: 14px; 
+    
+}
+
+#content ul,#content ol{
+    padding-left: 20px;
+}
+.teal{
+    color:teal;
+}
+.bold{
+    font-weight: bolder;
+}
+#content img{
+    width: 259px;
+    height:79px;
+    padding-left:210px;
+
+}
+.bottombox{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 60px;
+
+}
+.bottombox img{
+    width:80px;
+    height:80px;
+    display: inline-block;
+    margin-left:250px;
+    position: relative;
+    bottom:100px;
+    border-top:5px solid blue;
+    border-left:5px solid blue;
+    border-right:5px solid blue;
+
+}
+.bottombox h2{
+    color: blue;
+    vertical-align: top;
+    width:400px;
+    display:inline-block;
+    margin-left:360px;
+   position: relative;
+   bottom: 200px;
+   
+    
+    
+
+}
+.bottombox p{
+    vertical-align: center;
+    margin-left:360px;
+    width:600px;
+    position: relative;
+    bottom: 190px;
+}
+.bottomboxline{
+    border-style: solid;
+    border-width: 3px;
+    border-color:blue;
+    vertical-align: center;
+    width:700px;
+}

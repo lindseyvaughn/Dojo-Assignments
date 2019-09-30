@@ -1,0 +1,282 @@
+*{
+    margin:0px;
+    padding:0px
+}
+.container{
+    background-color:white;
+    height:1240px;
+    Width:1200px;
+    border-style: solid;
+    border-width: 10px;
+    border-color:rgb(2, 2, 41);
+    
+}
+.header{
+    display: inline-block;
+    color:white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:1200px;
+    height: 100px;
+    background-color:rgb(2, 2, 41);
+    margin-left:.2px;
+}
+.header p{
+    font-size: 40px;
+    display:inline-block;
+    font-weight:normal;
+    color: white;
+    padding-top: 20px;
+    width: 100px;
+    height:100px;
+    padding-left: 30px;
+}
+.header p span{
+    color:lightblue;
+    position: relative;
+    bottom:48px;
+    margin-left: 140px;
+    
+}
+.header h2 span{
+    color: blue;
+    width:90px;
+    height:90;
+    display:inline-block;
+    position: relative;
+    left:400px;
+    position: relative;
+    bottom:85px;
+    padding-left:60px;
+}
+.rightheader h2{
+    color: white; 
+    width:100px;
+    height:30px;
+    display: inline-block;
+    position: relative;
+    left:550px;
+    position: relative;
+    bottom: 110px;
+    padding-left:60px;
+}
+.body{
+    width:1100px;
+    height:500px;
+    background-color: white;
+    margin: auto;
+
+}
+.body img{
+    Width:950px;
+    height:500px;
+    margin:auto;
+}
+.uppermiddlebox{
+    float:left;
+    width: 200px;
+    height: 50px;
+    
+}
+.services{
+    float:left;
+    background-color:rgb(29, 127, 255);
+    width: 300px;
+    height: 200px;
+    position: relative;
+    bottom: -10px;
+    position: relative;
+    left: 50px;
+   
+
+}
+.services h2{
+    color:white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    padding-left: 85px;
+    position: relative;
+    bottom: 5px;
+}
+.services h1{
+    color:white;
+    font-size:15px;
+    position: relative;
+    top: 30px;
+    position: relative;
+    right: 1px;
+    padding-left: 20px;
+    padding-right:20px;
+
+} 
+.services img{
+    width:30px;
+    position: relative;
+    bottom: 130px;
+    position: relative;
+    left: 30px;;
+    
+}
+.projects{
+    float:left;
+    background-color:rgb(29, 127, 255);
+    width: 300px;
+    height: 200px;
+    position: relative;
+    left: 375px;
+    position: relative;
+    bottom: 190px;
+    
+        
+}
+.projects h2{
+    color:white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    padding-left: 85px;
+    position: relative;
+    bottom: 5px;
+}
+
+.projects h1{
+    color:white;
+    font-size:15px;
+    position: relative;
+    top: 30px;
+    position: relative;
+    right: 1px;
+    padding-left: 20px;
+    padding-right:20px;
+}
+.projects img{
+    width:30px;
+    position: relative;
+    bottom: 130px;
+    position: relative;
+    left: 30px;
+}
+.clients{
+    float:left;
+    background-color:rgb(29, 127, 255);
+    width: 300px;
+    height: 200px;
+    position: relative;
+    left: 700px;
+    position: relative;
+    bottom: 390px;
+        
+    
+}
+.clients h2{
+    color:white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    padding-left: 85px;
+    position: relative;
+    bottom: 5px;
+}
+.clients h1{
+    color:white;
+    font-size:15px;
+    position: relative;
+    top: 30px;
+    position: relative;
+    right: 1px;
+    padding-left: 20px;
+    padding-right:20px;
+}
+.clients img{
+    width:30px;
+    position: relative;
+    bottom: 130px;
+    position: relative;
+    left: 30px;
+}
+.bottombox{
+    position: relative;
+    top:100px;
+}
+.theworldcanbeyours h2{
+    font-size: 20px;
+    width: 500px;
+    position: relative;
+    top: 150px;
+    position: relative;
+    right: 165px;
+
+}
+.theworldcanbeyours img{
+    position: relative;
+    top:150px;
+    width:270px;
+    position: relative;
+    right: 150px;
+}
+.theworldcanbeyours p{
+    width:300px;
+    position: relative;
+    left: 380px;
+}
+.theworldcanbeyours a{
+    position: relative;
+    left: 390px;
+    position: relative;
+    top: 30px;
+}
+.testimonial h1{
+    width:300px;
+    font-size: 25px;
+    position: relative;
+    left: 750px;
+    position: relative;
+    bottom: 190px;
+}
+.testimonialbox p{
+    width:230px;
+    height:100px;
+    position: relative;
+    left: 730px;
+    position: relative;
+    bottom: 180px;
+    background-color:lightblue;
+    padding-left: 30px;
+    padding-right:30px;
+    margin-right: 60px;
+}
+.testimonialbox h1{
+    font-size: 8px;
+    position: relative;
+    bottom: 120px;
+}
+.footer{
+    width:1200px;
+    height: 50px;
+    background-color: lightblue;
+    margin-top: 60px;
+}
+.footer h2 span{
+    color:rgb(73, 206, 247);
+    padding-right:200px;
+    width: 10px;
+}
+.footer h2{
+    font-size:10px;
+    color: black; 
+    width:5px;
+    height:30px;
+    display: inline-block;
+    position: relative;
+    left:130px;
+    position: relative;
+    bottom: -60px;
+    padding-left:150px;
+    position: relative;
+    top: 15px;
+}
+.footerline{
+    border-style: solid;
+    border-width: .5px;
+    border-color:black;
+    width:1200px;
+    position: relative;
+    bottom: 35px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="soccer_quiz.css">
+
+    <title>Soccer Quiz</title>
+
+    <script>
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).siblings(".question1").show();
+            });
+            $('button').click(function(){
+                $('p').hide('fast');
+        });
+            
+            $('p').click(function(){
+             $(this).siblings(".answer1").show();
+        });
+    });
+        
+    </script>
+</head>
+<body> 
+   
+    <div class="container col-8">
+        <hr class='my-4'>
+        <h1>How well do you know the game of soccer?</h1>
+    </div>
+   
+    <hr class=my-4>
+   
+    <div class= 'soccer'>
+            <img class="img"src="soccerball.jpeg" alt="error">
+            <p class="question1"> How many players are on the field?</p>
+            <p class="answer1"> Twenty Two</p>
+
+    </div>
+    <div class='soccer'>
+              <img src="soccerball.jpeg" alt="error">
+              <p class="question1">What are the home colors of the FC Barcelona soccer uniform?</p>
+              <p class="answer1">Blue,Red, and Maroon</p>
+    </div>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> How many minutes is a professional soccer game?</p>
+                <p class="answer1"> 90 minutes long</p>
+        </div>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> Can the goaly touch the ball with his hands?</p>
+                <p class="answer1"> Yes</p>
+        </div>
+        <hr class=my-4>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> Can the goaly be slide tackled?</p>
+                <p class="answer1"> NEVER!!!</p>
+        </div>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> What does a yellow card mean?</p>
+                <p class="answer1"> Used to caution players</p>
+        </div>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> What does a red card mean?</p>
+                <p class="answer1"> used to dismiss the players from the field of play</p>
+        </div>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> What happens if a player received two yellow cards in one game?</p>
+                <p class="answer1"> The player gets an automatic red card</p>
+        </div>
+        <hr class=my-4>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> What does the term back four mean?</p>
+                <p class="answer1"> Used to describe the defensive line</p>
+        </div>
+        <div class='soccer'>
+                <img src="soccerball.jpeg" alt="error">
+                <p class="question1"> What are 6 goals in soccer called?</p>
+                <p class="answer1"> Double</p>
+        </div>
+        <button type="button" class="btn btn-outline-dark">Reload</button>
+        
+</body>
+</html>

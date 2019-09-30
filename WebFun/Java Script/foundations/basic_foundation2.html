@@ -1,0 +1,298 @@
+//Basic Foundation 2
+<script>
+    //Question#1
+    console.log('Question1');
+
+    //given an array
+    //loop through all numbers
+    //check if number is positive
+    //change to "big"
+    //return array
+
+    function biggieSize(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                arr[i] = "big"
+            }
+        }
+        return arr
+    }
+</script>
+<script>
+    //Question#2
+    console.log('Question2');
+
+    //create a function 
+    //loop through all numbers
+    //check for the lowest 
+    // return highest value in array 
+
+    function printlowreturnhigh(arr) {
+        var max = arr[0]
+        var min = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                arr[i] = min;
+            }
+            if (arr[i] > max) {
+                arr[i] = max;
+            }
+        }
+        console.log(max)
+        return min;
+    }
+</script>
+<script>
+    //Question#3
+    console.log('Question3');
+
+    //build a function 
+    //loop through all numbers
+    //check for the second to last value in arr
+    //print second to last value
+    //return the first off value in the arr
+
+    function printonereturnanother(arr) {
+        console.log(arr[arr.length - 2]);
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 1) {
+                return arr[i];
+            }
+        }
+    }
+</script>
+
+<script>
+    //Question#4
+    console.log('Question4');
+
+    //create a function 
+    //create new array
+    //loop through all numbers
+    //double value of arr[i]
+    //push values into new array
+    //return new array 
+    function doublevision(arr) {
+        let newArr = []
+        for (i = 0; i < arr.length; i++){
+            value = arr[i] * 2;
+            newArr.push(value)
+        }
+        return newArr
+    }
+</script>
+ <script>
+    //Question#5
+    console.log('Question5');
+
+//given an array of #s
+//create a function 
+//loop through all numbers
+//count all positive numbers
+//replace last value with count
+
+function countpositives(arr){
+    for(i=0; i<arr.length;i++){
+        if(arr[i]>0){
+            count ++
+        }
+
+    }
+    arr[arr.length-1]=count;
+    return arr;
+}
+</script>
+<script>
+    //Question#6
+    console.log('Question6');
+
+    //create a function 
+    //loop through all numbers
+    //check for 3 odd values in a row
+    //check for 3 evens 
+    //print "thats odd!" 
+    //print "Even more so!"
+
+    function evensandodds (arr){
+        evencount=0
+        oddcount=0
+        for(i=0; i<arr.length; i++){
+            if(arr[i] % 2 ===0){
+                evencount ++;
+                if(evencount===3){
+                    console.log("even more so!");
+                }
+            }
+            else{
+                oddcount++;
+                if(oddcount === 3){
+                    console.log("That's odd!");
+                }
+            }
+        }
+    }
+</script> 
+<script>
+    //Question#7
+    console.log('Question7');
+
+    //create a function 
+    //loop through every other number
+    //add the value of one to the value in that index 
+    //print array values 
+    //return array 
+
+
+    function incrementseconds(arr){
+        for(var i=0;i<arr.length; i++){
+            if(i%2!==0){
+                arr[i]=arr[i] +1;
+
+            }
+            console.log(arr[i]);
+
+        }
+        return arr; 
+    }
+    incrementseconds= [0,4,2,6,-1,-3];
+</script> 
+
+<script>
+    //Question#8
+    console.log('Question8');
+
+    //create a function 
+    //loop through the length of array 
+    //replace string with length of string 
+    //return array 
+
+    function previouslengths(arr){
+        for(var i=arr.length-1;i>0;i++){
+            arr[i]= arr[i-1].length;
+        }
+        return arr;
+    }
+previouslengths = ["hello","dojo","awesome"];
+</script>
+
+<script>
+    //Question#9
+    console.log('Question9');
+
+    //create a function 
+    //loop through array 
+    //add 7 to each array index 
+    //return new arr 
+
+    function addseven(arr){
+        for(var i=0; i<arr.length; I++){
+            arr[i]=arr[i]+ 7;
+        }
+        return arr;
+        
+    }
+addseven ([1,3,5,7,9]);
+</script> 
+<script>
+    //Question10
+    console.log('Question10')
+    //create a function
+    //loop through array
+    //reverse values
+    //return array
+    
+    function reverseArr(arr){
+        temp = 0;
+        for(i=0; i<arr.length/2; i++){
+            temp=arr[i];
+            arr[i]=arr[arr.length-1-i];
+            arr[arr.length-1-i]=temp;
+        }
+        return arr;
+    }    
+    reverseArr([2,3,6,9,7]);
+    </script>
+    
+    <script>
+    //Question11
+    console.log('Question11')
+    //create a function
+    //loop through array
+        //create value negative if positive
+    //return new array
+    function Negative(arr){
+        var newArr = [];
+        for (var i=0;i<arr.length;i++){
+            if(i<0){
+                newArr[i]= -arr[i];
+            }
+        }
+    return newArr;
+    }
+    
+    var x= [1,-3,5];
+    console.log(Negative(x));
+    </script>
+    
+    <script>
+    //Question12
+    console.log('Question12')
+    //create a function
+    //loop through array
+        //look for food
+    //if find value food print yummy
+    //else print I'm hungry
+    
+    function alwaysHungry(arr){
+        var count = 0;
+        for (var i=0;i<arr.length;i++){
+            if (arr[i] == "food"){
+                console.log("yummy");
+                    count++;
+            }
+        }
+        if(count==0){
+            console.log("I'm hungry");
+        }
+    }
+    console.log(alwaysHungry([2, "food", 5, "food", "food"]));
+    console.log(alwaysHungry([2, 6, 5, 1]));
+    </script>
+    
+    <script>
+    //Question13
+    console.log('Question13')
+    //create a function
+    //loop through the array
+    //swap first and last values & third and third to last
+    function swap(arr){
+        var count =0;
+        for(i=arr.length-1;i>arr.length/2;i--){
+            var temp = arr[i];
+            arr[i]=arr[count];
+            arr[count]=temp;
+            count++;
+            i--;
+            count++;
+    }
+        return arr;
+    }
+    console.log(swap(["lauren",24,"is",5,"awesome"]));
+    </script>
+    
+    <script>
+    //Question14
+    console.log('Question14')
+    //create a function
+    //loop through the array
+    //multiply all values in array by number given
+    //return changed array
+    
+    function scale(arr,num){
+        for(i=0;i<arr.length;i++){
+            arr[i]*=num;
+        }
+        return arr;
+    }
+    console.log(scale([1, 2, 3],3));
+    </script>

@@ -1,0 +1,143 @@
+//Intermediate_foundationpart1
+<script>
+    //Question#1
+    console.log('Question1');
+
+//create function 
+//declare variable 
+//find positive integers
+//return the sum
+
+function sigma(num){
+    var sum=0
+    for(var i=0; i<=(num); i++){
+        sum=sum+i 
+    }
+return sum; 
+}
+sigma(4); 
+</script> 
+
+<script>
+    //Question#2
+    console.log('Question2');
+
+    //create function(num)
+    //declare variable 
+    //for loop 
+    //sum*1
+    //return 
+
+    function factorial(num){
+        var factsum=1
+        for(var i=1;i<=num; i++){
+            factsum=factsum*i;
+        }
+    return factsum;
+    }
+factorial(3)
+</script> 
+<script>
+    //Question#3
+    console.log('Question3');
+
+    //create function 
+    //for loop starts at 0
+    //add values from previous index 
+
+    function fib(num){
+        var arr=[];
+        var count=[];
+        for(i=0;i<=num;i=i + arr[count]);
+            arr.push(i);
+            if(i==0){
+                i++;
+            }
+           count++;
+
+        }
+        return arr;
+    }
+    console.log(fib(5));
+
+</script> 
+<script>
+    //Question#4
+    console.log('Question4');
+
+    function secondtolast (arr){
+        if(arr.length<2){
+            return "null";
+        } else{
+            return arr[arr.length-2];
+        }
+    }
+    secontolast ([1]);
+    secontolast ([42, true,4, "Liam", 7]);
+</script> 
+<script>
+    //Question#5
+    console.log('Question5');
+
+    function NthtoLast(arr,n){
+        if(arr.length+1<n){
+            return "null";
+    } else{
+    return arr[arr.length-n];   
+    }
+ }
+ return arr[arr.length-n];
+
+</script> 
+<script>
+    //Question#6
+    console.log('Question6');
+    function littleBig(arr){
+    var max=arr[0];
+    var lil=0;
+    for(i=0;i<arr.length;i++){
+        if(arr.length<2){
+            return ('null');
+        }
+        else{
+            if(arr[i]>max){
+                max=arr[i];
+            }
+            else if(arr[i]!==max){
+                if(arr[i]>arr[i+1]){
+                    little=arr[i];
+                }
+
+            }
+        }
+    }
+    return little
+}
+console.log(littleBig([42,-1,4,9,-7]));
+console.log(littleBig([1]));
+</script>
+<script>
+    //Question#7
+    console.log('Question7');
+    function double(arr){
+    var half = arr.length;
+    var count = Math.ceil(half/2-1);
+    for(i = Math.floor(half/2);i<half;i++){
+        arr.push(arr[i]);
+        arr.push(arr[i]);
+        
+    }
+    console.log()
+    for(j=Math.ceil(arr.length/2);j>0;j--){
+        arr[j]=arr[count];
+        arr[j-1]=arr[count];
+        count--;
+        j--;
+    }
+    return arr;
+}
+console.log(double([4, 'ulysses',42,false]));
+</script>
+
+
+
