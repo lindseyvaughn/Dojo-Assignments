@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+    <title>Create a new job</title>
+</head>
+<body>
+    <div class='container'>
+        <h1>Hello, {{user.first_name}}!</h1>
+        <a class="btn btn-light" href="/logout">Log out</a>
+    <form action="/create_job" method='POST'>
+            {%csrf_token%}
+            <h1>{{job.title}}</h1>
+            <h1>{{job.description}}</h1>
+            <h1>{{job.location}}</h1>
+        <div class='form-group row'>
+                <label class='mt-2 col-sm-3' for="formGroupExampleInput"><h6>Title:</h6></label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" placeholder="Default input" name='title'>
+                </div>
+        </div>
+        <div class='form-group row'>
+                <label class='mt-2 col-sm-3' for="formGroupExampleInput"><h6>Description:</h6></label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" placeholder="Default input" name='description'>
+                </div>
+        </div>
+        <div class='form-group row'>
+                <label class='mt-2 col-sm-3' for="formGroupExampleInput"><h6>Location:</h6></label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" placeholder="Default input" name='location'>
+                    <button type="submit" class="btn btn-light">Cancel</button>
+                </div>
+                <!-- <a href="/success/{{user.id}}">submit</a> -->
+                <button>Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

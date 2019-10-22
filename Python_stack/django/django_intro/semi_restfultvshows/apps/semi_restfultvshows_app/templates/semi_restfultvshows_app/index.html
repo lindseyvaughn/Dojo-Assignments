@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Add a new show</title>
+</head>
+<body>
+    <div class="container" align='center'>
+        <div class='wrapper'>
+                {% if messages %}
+                <ul class="messages">    
+                    {% for message in messages %}    
+                        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
+                {% endif %}
+        <div class="row">
+            <div class="col-6">
+                <a href="/shows">Go Back</a>
+            <form action="/savenewshows" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+               <h4>Add a New Show</h4> 
+              <label for="formGroupExampleInput">Title</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" name="title">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">network</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" name="network">
+            </div>
+            <div class="form-group">
+                    <label for="formGroupExampleInput2">Release date</label>
+                    <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="" name="release_date">
+            </div>
+            <div class="form-group">
+                    <label for="formGroupExampleInput2">Description</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" name="description">
+                    <button type="submit" class="btn btn-light">Create</button>
+            </div>
+
+      </form>
+        </div>
+        </div>
+    </div>
+     </div>
+</body>
+</html>

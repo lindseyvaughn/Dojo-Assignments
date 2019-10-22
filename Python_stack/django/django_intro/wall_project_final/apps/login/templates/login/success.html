@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+    <title>Success</title>
+
+</head>
+<body>
+<div class='container'>
+        <div class='header p-3 mb-2 bg-light text-dark'>
+            <div class="row">
+                <div class="col">
+                    <h5>CodingDojo Wall</h5>
+                </div>
+                <div class="col-md-auto">
+                    <h5>Welcome {{user.first_name}}</h5>
+                </div>
+                <div class="col col-lg-2">
+                        <a href="/logout">Log Out</a>
+                </div>
+            </div>
+        </div>
+        <div class="message">
+            <form action="/post_message/{{user.id}}" method="POST">
+                {% csrf_token %}
+                <p>Post a message:</p>
+                <textarea class="form-control" name="message" id=""></textarea>
+                <input type="submit" value="Post a message">
+            </form>
+        </div>
+        <hr>
+        <br>
+        <div class="comment">
+            {% for message in all_messages %}
+            <p>{{message.user.first_name}} {{message.user.last_name}} {{message.created_at}}</p>
+            <p>Message: {{message.message}}</p>
+                {% for comment in message.comments.all %}
+                <p>{{comment.user.first_name}} {{comment.user.last_name}} {{comment.created_at}}</p>
+                <p>Comment:{{comment.comment}}</p>
+                {% if comment.user.id == user.id %}
+                <a href="/delete/{{comment.id}}/{{user.id}}">Delete</a>
+                {%endif%}
+                {% endfor %}
+                <form action="/post_comment/{{message.id}}/{{user.id}}" method="POST">
+                    {% csrf_token %}
+                    <p>Post a comment:</p>
+                    <textarea class="form-control" name="comment" id=""></textarea>
+                    <input type="submit" value="Post a comment">
+                </form>
+                <hr>
+            {% endfor%}
+        </div>
+
+
+
+
+
+
+
+
+
+</div>
+    
+</body>
+</html>
