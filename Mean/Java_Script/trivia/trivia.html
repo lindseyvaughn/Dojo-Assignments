@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<script>
+    $(document).ready(function () {
+        $('input').click(function () {
+            console.log("hello_world")
+            $.get('https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple', trivia_questions)
+            function trivia_questions(data) {
+                var trivia_html = ''
+                for (i in data.results) {
+                    console.log(data.results[i]);
+                    trivia_html += '<p>' + data.results[i].question + '<p>'
+                    trivia_html += '<select>'
+                    trivia_html += '<p>' + data.results[i].correct_answer + '<p>'
+                    for (j in data.results[i].incorrect_answers) {
+                        trivia_html += "<option>" + data.results[i].incorrect_answers[j] + "</option>"
+                    }
+                    trivia_html += "</select>"
+                    $('.display').html('<div>' + trivia_html + '</div>')
+
+                }
+            }
+        })
+    });
+</script>
+<input type="button" class='btn btn-danger' value='submit'>
+<div class='display'></div>
+
+<body>
+</body>
+
+</html>

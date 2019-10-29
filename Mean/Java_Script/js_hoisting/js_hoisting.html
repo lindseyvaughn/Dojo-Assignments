@@ -1,0 +1,78 @@
+<script>
+    console.log('#1')
+    var hello;
+    console.log(hello);
+    var hello = 'world';
+</script>
+<script>
+    console.log('answer')
+    console.log(hello);
+    var hello = 'world';
+</script>
+
+
+<script>
+    console.log('#2')
+    var needle = 'haystack';
+    test();
+    function test() {
+        var needle = 'magnet';
+        console.log(needle);
+    }
+</script>
+<script>
+    console.log('answer')
+    var needle = 'haystack';
+    function test() {
+        var needle = 'magnet';
+        console.log(needle);
+    }
+    test();
+</script>
+<script>
+    console.log('#3')
+    var brendan = 'super cool';
+    function print() {
+        brendan = 'only okay';
+        console.log(brendan);
+    }
+    console.log(brendan);
+
+</script>
+<script>
+    console.log('answer')
+    var brendan;
+    function print() {
+        var brendan
+        brendan = 'only okay';
+        console.log(brendan);
+    }
+    brendan = 'super cool';
+    console.log(brendan);
+
+</script>
+
+<script>
+    console.log('#4')
+    var food = 'chicken';
+    console.log(food);
+    eat();
+    function eat() {
+        food = 'half-chicken';
+        console.log(food);
+        var food = 'gone';
+    }
+</script>
+<script>
+    console.log('answer')
+    var food;
+    function eat() {
+     console.log(food);
+    eat();
+        food = 'half-chicken';
+        console.log(food);
+        var food = 'gone';
+    }
+
+
+</script>

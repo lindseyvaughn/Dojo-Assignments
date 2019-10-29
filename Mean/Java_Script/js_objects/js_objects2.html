@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    let users = {
+        employees: [
+            { 'first_name': 'Miguel', 'last_name': 'Jones' },
+            { 'first_name': 'Ernie', 'last_name': 'Bertson' },
+            { 'first_name': 'Nora', 'last_name': 'Lu' },
+            { 'first_name': 'Sally', 'last_name': 'Barkyoumb' }
+        ],
+        managers: [
+            { 'first_name': 'Lillian', 'last_name': 'Chambers' },
+            { 'first_name': 'Gordon', 'last_name': 'Poe' }
+        ]
+    };
+    function staff(dict) {
+        for (staff in users) {
+            console.log(staff.toUpperCase());
+            for (var i = 0; i < users[staff].length; i++) {
+                var charCount = users[staff][i].first_name.length + users[staff][i].last_name.length;
+                console.log(i+1 + "-" + users[staff][i].first_name.toUpperCase() + users[staff][i].last_name.toUpperCase() + "-" + charCount);
+            }
+        }
+    }
+    console.log(staff(users))
+</script>
+
+<body>
+
+
+
+
+
+</body>
+
+</html>

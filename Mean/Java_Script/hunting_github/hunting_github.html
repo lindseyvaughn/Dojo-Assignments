@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $('input').click(function () {
+                console.log("hello_world")
+                $.get('https://api.github.com/users/LindseyVaughn', displayName)
+
+                function displayName(data) {
+                    console.log(data.login);
+                    $('.display').text(data.login)
+                }
+            });
+        });
+
+
+    </script>
+    <input type="button" class='btn btn-danger' value='submit'></input>
+    <p class='display'></p>
+
+
+
+
+
+
+</body>
+
+</html>
