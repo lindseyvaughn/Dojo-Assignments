@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Class III</title>
+</head>
+<body>
+    <script>
+        class Ninja {
+            constructor(name) {
+                this.name = name;
+                this.health = 100;
+                this.speed = 3;
+                this.strength = 3;
+            }
+            sayName() {
+                console.log(`Hi my name is ${this.name}`);
+
+            }
+            showStats() {
+                console.log(`Name: ${this.health}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`);
+            }
+            drinkSake() {
+                this.health += 10;
+                console.log(this.health)
+            }
+        }
+        class Sensei extends Ninja {
+            constructor(name){ 
+            super(name);
+            this.health += 100;
+            this.speed += 7;
+            this.strength += 7;
+            this.wisdom = 10;
+        }
+        speakWisdom() {
+            this.drinkSake();
+            console.log(`There is no monser more dangerous than a lack of compassion.`)
+        }
+    }
+        const lindseyvaughn = new Ninja('Lindseyvaughn');
+        const splinter = new Sensei('Master Splinter');
+
+        splinter.showStats();
+        lindseyvaughn.sayName();
+        lindseyvaughn.showStats();
+        lindseyvaughn.drinkSake();
+        splinter.speakWisdom();
+
+    </script>
+    
+</body>
+</html>

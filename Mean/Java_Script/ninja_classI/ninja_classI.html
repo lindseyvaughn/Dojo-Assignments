@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Class I</title>
+</head>
+
+<body>
+    <script>
+        // Define the object constructor
+        function Ninja(name) {
+            this.name = name;
+            this.health = 100;
+            var privateSpeed = 3;
+            var privateStrength = 3;
+            this.sayName = function () {
+                console.log('Hello my name is ' + this.name + "!");
+            }
+            this.showStats = function () {
+                console.log('Name: ' + this.name + ',Health: ' + this.health + ', privateSpeed' + privateSpeed + ', privateStrength' + privateStrength)
+            }
+            this.drinkSake = function () {
+                this.health += 10;
+            }
+            this.speed = function () {
+                console.log(privateSpeed);
+            }
+            this.punch = function (opponent) {
+                if (opponent instanceof Ninja) {
+                    opponent.health -= 5;
+                    console.log(this.name + ' punched' + opponent.name)
+                }
+                else {
+                    console.log("Attack failed")
+                }
+            }
+            this.kick = function (opponent) {
+                if (opponent instanceof Ninja) {
+                    opponent.health -= (15 * (privateStrength))
+                    console.log(this.name + 'kicked' + opponent.name)
+                }
+                else {
+                    console.log("Attack failed")
+                }
+                return this.showStats();
+            }
+        }
+            var lindseyvaughn = new Ninja('Lindseyvaughn');
+            var dantedinkins = new Ninja('Dantedinkins')
+            lindseyvaughn.sayName();
+            lindseyvaughn.showStats();
+            lindseyvaughn.drinkSake();
+            lindseyvaughn.speed();
+            lindseyvaughn.punch(dantedinkins)
+            dantedinkins.showStats();
+            dantedinkins.kick(lindseyvaughn);
+            lindseyvaughn.showStats();
+    </script>
+</body>
+
+</html>

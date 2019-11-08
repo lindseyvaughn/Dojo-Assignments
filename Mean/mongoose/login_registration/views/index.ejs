@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%
+    if (messages.reg) { 
+    for (message of messages.reg) { %>
+        <p><%= message %></p>
+    <% } } %>
+    <h3>Login:</h3>
+    <form action="/login" method="POST">
+        <p>email:</p><input type="text" name="email" id="email">
+        <p>password:</p><input type="password" name="password" id="password">
+        <input type="submit" value="Login">
+    </form>
+    <h3>Registration:</h3>
+    <form action="/register" method="POST">
+        <p>email:</p><input type="text" name="email" id="email">
+        <p>first name:</p><input type="text" name="first_name" id="first_name">
+        <p>last name:</p><input type="text" name="last_name" id="last_name">
+        <p>birthday:</p><input type="date" name="birthday" id="birthday">
+        <p>password:</p><input type="password" name="password">
+        <p>confirm password:</p><input type="password" name="cpassword">
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

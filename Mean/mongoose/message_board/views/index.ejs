@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> </title>
+</head>
+
+<body>
+    <div class='container col-8'>
+        <h1>Message Board</h1>
+        <form action="/post_message" method='POST'>
+            <p>Name:</p>
+            <p><input type="text" name='msg_name'></p>
+            <% if (messages.msg_name){ %>
+                <p class="alert alert-danger"><%= messages.msg_name[0] %></p>
+            <% } %>
+            <p>Message:</p>
+            <p><textarea name='msg_content'></textarea></p>
+            <% if (messages.msg_content){ %>
+                <p class="alert alert-danger"><%= messages.msg_content[0] %></p>
+            <% } %>
+            <input type="submit" >
+        </form>
+        <% for(var message of msgs) { %>
+            <%= message.msg_name %>
+            <%= message.msg_content %>
+        <a href="/delete/<%= message._id %>">Delete Message</a>
+            <% for(var comment of message.comments) { %>
+                <%= comment.comment_name %>
+                <%= comment.comment_content %>
+            <% } %>
+        <form action="/post_comment/<%= message._id%>" method='POST'>
+            <p>Name:</p>
+            <p><input type="text" name='comment_name'></p>
+            <% if (messages.comment_name){ %>
+                <p class="alert alert-danger"><%= messages.comment_name[0] %></p>
+            <% } %>
+            <p>Comment:</p>
+            <p><textarea name='comment_content'></textarea></p>
+            <% if (messages.comment_content){ %>
+                <p class="alert alert-danger"><%= messages.comment_content[0] %></p>
+            <% } %>
+            <input type="submit">
+        </form>
+        <% } %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container col-8" align=center>
+        <div class="jumbotron">
+            <h1>Owls:</h1>
+            <form action="/owls" method="post" class="form_control">
+                <p>Owl's Name:</p> 
+                <input type="text" name="name" class="form-control">
+                <p>Owl's Age:</p> 
+                <input type="text" name="age" class="form-control">
+                <p>Owl's Favorite Food:</p> 
+                <input type="text" name="favorite_food" class="form-control">
+                <p>Owl's Gender:</p>
+                <select name="gender" class="form-control">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                </select>
+                <input type="submit" value="Add" class="btn btn-outline-secondary">
+                <input type="submit" value="Update" class="btn btn-outline-secondary">
+                <input type="submit" value="Delete" class="btn btn-outline-secondary">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
