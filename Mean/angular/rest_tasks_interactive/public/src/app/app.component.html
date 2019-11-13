@@ -6,13 +6,50 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class='container col-8 border border-warning'>
+    <div class='header'>
+        <h1>Restful Tasks API</h1>
+    </div>
+    <div class='allTasks'>
+        <h3>All the tasks:</h3>
+        <p *ngFor="let task of tasks">
+            {{task.title}} 
+            <button (click)="showTask(task)" class="btn btn-light">Show</button>
+            <button (click)="updateTask(task)" class="btn btn-secondary">Edit</button>
+            <button (click)="deleteTask(task)" class="btn btn-warning">Delete</button>
+        </p>
+    </div>
+    <button (click)="getTasksFromService()" class="btn btn-dark">Show Tasks</button>
 
-<h1>Restful Tasks API</h1>
 
-<h3>All the tasks:</h3>
+    <div class="createTasks">
+        <h4 *ngIf="oneTask">
+            <div class='desc'>
+                <h3>{{oneTask.title}}</h3>{{oneTask.description}}
+            </div>
+        </h4>
+        <form (submit)='onSubmit()' class='postForm'>
+            <p>{{newTask | json}}</p>
+            <label>Task title:
+                <input type="text" name='newTask.title' [(ngModel)]='newTask.title' />
+            </label>
+            <label> Task description:
+                <input type="text" name="newTask.description" [(ngModel)]="newTask.description" />
+            </label>
+            <input type="submit" value='Create Task' class='btn btn-dark'>
+        </form>
+        <hr>
+        <h3>Edit Tasks</h3>
+        <form *ngIf="editTask" (submit)='sendEdit()'>
+            <p>{{editTask | json}}</p>
+            <p>Task title:</p>
+            <input type="text" name='editTask.title' [(ngModel)]="editTask.title">
+            <p>Task description:</p>
+            <input type="text" name='editTask.description' [(ngModel)]="editTask.description">
+            <input type="submit" value='edit' class='btn btn-dark'>
+        </form>
 
-<p *ngFor="let task of tasks">{{task.title}} - {{task.description}} <button (click)="showTask(task)" class="btn-btn-primary btn-lg">Show</button></p>
-<!-- <p>{{thirdTask.title}} {{thirdTask.description}}</p> -->
-<button (click)="getTasksFromService()" class="btn-btn-primary btn-lg">Show Tasks</button>
-<h4 *ngIf="oneTask"><div class='desc'><h3>{{oneTask.title}}</h3>{{oneTask.description}}</div></h4>
-<router-outlet></router-outlet>
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.container{
+    height:900px;
+    width:900px;
+    background-color: lightyellow;
+}
+.header{
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.allTasks{
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+.createTasks{
+    margin-top: 150px;
+}
