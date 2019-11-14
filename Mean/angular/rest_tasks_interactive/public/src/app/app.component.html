@@ -50,6 +50,8 @@
         </form>
 
         <router-outlet></router-outlet>
+        <app-task *ngIf='oneTask' [taskToShow]='oneTask'></app-task>        
     </div>
+
 
 </div>
