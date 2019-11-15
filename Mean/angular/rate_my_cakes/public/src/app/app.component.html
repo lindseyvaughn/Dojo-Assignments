@@ -1,0 +1,69 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class='container'>
+    <h5>Rate My Cakes</h5>
+    <div class='top leftpanel'>
+
+        <hr>
+        <form (submit)='cakeSubmit()'>
+          <h3>Baker's Name:</h3>
+          <h3><input type="text" name='newCake.baker' [(ngModel)]="newCake.baker"></h3>
+          <h3>Image Url:</h3>
+          <h3><input type="text" name="newCake.image" [(ngModel)]="newCake.image" /></h3>
+          <input type="submit" value='Submit' />
+        </form>
+
+    </div>
+    <div class="text-center rightpanel">
+      <div class='display text-center'>
+        <div class= 'border border-dark'  *ngFor='let cake of cakes' >
+          <div class='img'></div>
+          <img width="50px" height="50px" class="pic" src="{{cake.image}}" (click)='getOneCake(cake)' /><br><br>
+          <div *ngFor='let rating of cake.ratings'>
+              <p>{{rating.rating}}</p>
+              <p>{{rating.comment}}</p>
+            </div>
+          <button (click)="deleteCake(cake)" class="btn btn-warning">Delete</button>
+          <form (submit)="ratingSubmit(cake)">
+            <select name="cake.newRating.rating" [(ngModel)]="cake.newRating.rating">
+              <option value="1" selected>1 star</option>
+              <option value="2">2 stars</option>
+              <option value="3">3 stars</option>
+              <option value="4">4 stars</option>
+              <option value="5">5 stars</option>
+            </select>
+            <textarea name="cake.newRating.comment" [(ngModel)]="cake.newRating.comment"></textarea>
+            <input id='rate' type='submit' value='Rate!' />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <app-cake *ngIf="selectedCake" [getOneCake]="selectedCake"></app-cake>
+    </div>
+
+  </div>
+
+
+</body>
+<router-outlet></router-outlet>
+
+</html>

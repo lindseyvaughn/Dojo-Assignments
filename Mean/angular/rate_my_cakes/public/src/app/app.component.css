@@ -1,0 +1,20 @@
+body{
+    background-color: bisque;
+    height: 100vw;
+}
+.display{
+    overflow: scroll;
+    height:500px;
+    display:inline-block
+    
+}
+.rightpanel{
+    display: inline-block;
+    margin:50px;
+    vertical-align: top;
+
+}
+.leftpanel{
+    display: inline-block;
+    vertical-align: top;
+}

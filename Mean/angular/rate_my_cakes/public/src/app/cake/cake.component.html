@@ -1,0 +1,10 @@
+
+<div class='container border border-dark'>
+<h6>{{getOneCake.baker}}</h6>
+<img src="{{getOneCake.img}}" width=100px>
+<div *ngFor='let rating of getOneCake.ratings'>
+    <p>{{rating.comment}}</p>
+    <p>{{rating.rating}}</p>
+    <!-- <p>{{cake.avgrating}}</p> -->
+</div>
+</div>
