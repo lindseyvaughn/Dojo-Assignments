@@ -19,9 +19,9 @@ app.use(flash());
 // app.set("view engine", "ejs");
 app.use(express.static( __dirname + '/public/dist/public' ));
 
-mongoose.connect("mongodb://localhost/RestfulTask_API")
+mongoose.connect("mongodb://localhost/authors")
 require("./server/config/mongoose.js");
 
-require('./server/config/routes.js')(app)
-
-app.listen(8000, () => console.log("listening on port 8000"));
+require("./server/config/routes.js")(app)
+app.listen(8000, ()=> console.log("AUTHORS"))
+// app.listen(8000, () => console.log("listening on port 8000"));

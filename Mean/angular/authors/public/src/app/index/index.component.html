@@ -1,0 +1,32 @@
+<div class='container'>
+        <div class='title'>
+            <h2>{{title}}</h2>
+            <a [routerLink]="['/authors/new']">Add an Author</a>
+        </div>
+        <h4>We have Quotes by:</h4>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="row"></th>
+                        <th>Author</th>
+                        <th>Actions Available</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor='let author of authors'>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>{{author.name}}</td>
+                        <a [routerLink]="['/authors/' + author._id]">Edit</a>
+                        <button (click)="deleteAuthor(author._id)">Delete</button>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+

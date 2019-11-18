@@ -8,7 +8,6 @@ module.exports = {
         .then(data => res.json(data))
          .catch(err => res.json(err));
     },
-
     getCake: function(req,res){
         Cake.findOne({_id: req.params._id})
         .then(function(cake){res.json(cake)})
