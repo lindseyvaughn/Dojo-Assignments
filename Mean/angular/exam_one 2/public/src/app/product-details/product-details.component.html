@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Details</title>
+</head>
+<body>
+    <div class='container'>
+        <h2>Product Details</h2>
+        <p>{{viewProduct.name}}</p>
+        <p>{{viewProduct.quantity}}</p>
+        <p>{{viewProduct.price}}</p>
+        <button (click)="deleteProduct(product._id)">Delete</button>
+        <button><a [routerLink]="['']">Back</a>
+        </button>
+
+    </div>
+    
+</body>
+</html>

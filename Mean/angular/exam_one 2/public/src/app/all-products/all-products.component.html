@@ -1,0 +1,38 @@
+<div class='container'>
+    <div class='title'>
+        <h2>{{title}}</h2>
+        <a [routerLink]="['/products/new']">Add a New Product</a>
+    </div>
+    <h4>Product List</h4>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="row"></th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody *ngFor='let product of products'>
+                <tr>
+                    <th scope="row"></th>
+                    <td>{{product._id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.price}}</td>
+                    <a [routerLink]="['/products/' + product._id]">Edit</a>
+                    <a [routerLink]="['/productdetails/' + product._id]">Details</a>
+                    <button (click)="deleteProduct(product._id)">Delete</button>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>

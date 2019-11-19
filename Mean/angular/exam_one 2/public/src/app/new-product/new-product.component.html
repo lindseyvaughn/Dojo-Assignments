@@ -1,0 +1,28 @@
+<div class='container'>
+    <div class='title'>
+        <h2>{{title}}</h2>
+        <a [routerLink]="['']">Home</a>
+    </div>
+    <h4>Add a new product:</h4>
+    <div>
+        <div class='input'>
+            <p>Name:</p>
+            <p>Qty:</p>
+            <p>Price:</p>
+
+            <!-- <form (submit)="authorSubmit(author)"> // NOW THAT WE HAVE ANGULAR DONT NEED FORM TAG-->
+                <p class="error" *ngIf="errors.name">{{errors.name.message}}</p>
+                <input type="text" name='newProduct.name' [(ngModel)]="newProduct.name">
+                <p class="error" *ngIf="errors.quantity">{{errors.quantity.message}}</p>
+                <input type="text" name='newProduct.quantity' [(ngModel)]="newProduct.quantity">
+                <p class="error" *ngIf="errors.price">{{errors.price.message}}</p>
+                <input type="text" name='newProduct.price' [(ngModel)]="newProduct.price">
+                <button (click)="cancelProduct(product)" class="btn btn-warning">Reset</button>
+                <button (click)="addProduct()" class="btn btn-warning">Create</button>
+            <!-- </form> -->
+        </div>
+
+
+    </div>
+
+</div>
