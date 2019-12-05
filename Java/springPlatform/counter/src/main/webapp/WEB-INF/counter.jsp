@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>You have visited your server <c:out value="${count} "/>times</h1>
+<h1 >You have visited your server <c:out value="${count} "/>times</h1>
 <a href="/">Test another visit?</a>
 
 </body>
