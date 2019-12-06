@@ -45,5 +45,9 @@ public class BookService {
             Book book = findBook(id);
             bookRepository.delete(book);
         }
+        public Book updateBook(Book b) {
+            return bookRepository.save(b);
+        }
+        
     }
 
